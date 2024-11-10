@@ -15,18 +15,20 @@
 <div class="login-container">
     <h2 class="login-title">Bem-vindo de volta! Acesse sua conta</h2>
 
-    <form action="<?=$base;?>/login" method="post" id="loginForm" autocomplete="off">
-        <div class="error-message" id="error-message" style="display: none;">Erro: Credenciais inválidas</div>
+    <form action="<?= $base; ?>/login" method="post" id="loginForm" autocomplete="off">
+        <?php if(!empty($flash)): ?>
+            <div class="error-message" id="error-message" style="display: none;"><?= $flash; ?></div>
+        <?php endif; ?>
         
         <div class="form">
-            <input type="text" name="username"  id="username" required aria-labelledby="username">
+            <input type="text" name="username"  id="username"  aria-labelledby="username">
             <label for="username" class="label-name">
                 <span class="content-name">Usuário</span>
             </label>
         </div>
         
         <div class="form">
-            <input type="password" name="password"  id="password" required aria-labelledby="password">
+            <input type="password" name="password"  id="password"  aria-labelledby="password">
             <label for="password" class="label-name">
                 <span class="content-name">Senha</span>
             </label>

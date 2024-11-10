@@ -179,3 +179,43 @@ body, html {
         padding: 12px;
     }
 }
+
+
+pre.debug-output {
+    background-color: #2b2b2b;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow: auto;
+    white-space: pre-wrap; /* Permite quebra de linha */
+    word-wrap: break-word;
+}
+
+/* Estilos para chaves */
+pre.debug-output .key {
+    color: #66d9ef;
+    font-weight: bold;
+}
+
+/* Estilos para valores de string */
+pre.debug-output .string {
+    color: #a6e22e;
+}
+
+/* Estilos para valores numéricos */
+pre.debug-output .number {
+    color: #ae81ff;
+}
+
+/* Estilos para valores booleanos */
+pre.debug-output .boolean {
+    color: #fd971f;
+}
+
+/* Estilos para valores nulos */
+pre.debug-output .null {
+    color: #75715e;
+    font-style: italic;
+}

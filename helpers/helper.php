@@ -1,12 +1,9 @@
 <?php
 
-function asset(string $path = null)
+
+
+function fullStackPHPErrorHandler($error, $message, $file, $line)
 {
-    if ($path) {
-        // Acessando a constante BASE_DIR da classe Config de forma estática
-        return Config::BASE_DIR . ($path[0] == "/" ? mb_substr($path, 1) : $path);
-    }
-
-    return Config::BASE_DIR;
+    $color = ($error == E_USER_ERROR ? "red" : "yellow");
+    echo "<div class='trigger' style='border-color: var(--{$color}); color:var(--{$color});'>[ Linha {$line} ] {$message}<small>{$file}</small></div>";
 }
-

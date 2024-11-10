@@ -3,7 +3,7 @@ use core\Router;
 
 $router = new Router();
 
-$router->get('/', 'HomeController@index');
+$router->get('/dash', 'HomeController@index');
 
-$router->get('/login', 'LoginController@signin');
+$router->get('/', 'LoginController@signin');
 $router->post('/login', 'LoginController@signinAction');

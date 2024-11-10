@@ -3,23 +3,19 @@
 namespace src\controllers;
 
 use \core\Controller;
+use \core\Debugger;
+use \core\Database;
 
 class LoginController extends Controller 
 {
 
     public function signin() {
-        $flash = '';
-        if(!empty($_SESSION['flash'])) {
-            $flash = $_SESSION['flash'];
-            $_SESSION['flash'] = '';
-        }
-        $this->render('signin', [
-            'flash' => $flash
-        ]);
+
+        Debugger::dump(Database::testConnection());
+ 
     }
 
     public function signinAction() {
-        var_dump("hello");
+       
     }
-    
 }
