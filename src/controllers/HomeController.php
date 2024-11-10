@@ -12,11 +12,12 @@ class HomeController extends Controller
 
     public function __construct() {
         $this->loggedUser = UserHandler::checkLogin();
-        
+
         if($this->loggedUser === false) {
             $this->redirect('/login');
         }
     }
+    
 
     public function index() {
         $page = intval(filter_input(INPUT_GET, 'page'));
